@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
             String res = getString(R.string.tvSalario) + salarioLiquido.toString();
             tvSalario.setText(res);
-            
+
         }
 
         etHorasTrabaladas.setText("");
