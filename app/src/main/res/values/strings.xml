@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Calcula Salario</string>
+    <string name="tvCalSalario">Professor Calcule Seu Salário</string>
+    <string name="rbProfessorTitular">Titular</string>
+    <string name="rbProfessorHorista">Horista</string>
+
+    <string name="tvParaHorista">Caso Horista</string>
+    <string name="etHorasTrabalhadas">Quantidade Horas Trabalhadas</string>
+    <string name="etValorHora">Valor Da Hora Trabalhada $$$</string>
+
+    <string name="tvParaTitular">Caso Titular</string>
+    <string name="etAnosDeInstituicao">Anos Na Instituição</string>
+    <string name="etSalario">Salario Atual</string>
+
+    <string name="btnCalcularSalario">Calcular Salário</string>
+    <string name="tvSalario">R$ </string>
+</resources>

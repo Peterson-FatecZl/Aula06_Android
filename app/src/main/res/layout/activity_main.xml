@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tvParaHorista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rbProfessorTitular"
+            android:layout_width="178dp"
+            android:layout_height="54dp"
+            android:text="@string/rbProfessorTitular"
+            android:textAlignment="textStart"
+            android:textAllCaps="true" />
+
+        <RadioButton
+            android:id="@+id/rbProfessorHorista"
+            android:layout_width="175dp"
+            android:layout_height="54dp"
+            android:text="@string/rbProfessorHorista"
+            android:textAllCaps="true" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="68dp"
+        android:text="@string/tvCalSalario"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvParaHorista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvParaHorista"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etHorasTrabalhadas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/tvParaTitular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvParaTitular"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etAnosDeInstituicao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorHora" />
+
+    <EditText
+        android:id="@+id/etValorHora"
+        android:layout_width="255dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint="@string/etValorHora"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColorHint="#673AB7"
+        app:layout_constraintBottom_toTopOf="@+id/tvParaTitular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHorasTrabalhadas" />
+
+    <EditText
+        android:id="@+id/etAnosDeInstituicao"
+        android:layout_width="255dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="@string/etAnosDeInstituicao"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="#673AB7"
+        app:layout_constraintBottom_toTopOf="@+id/etSalarioAtual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvParaTitular" />
+
+    <EditText
+        android:id="@+id/etHorasTrabalhadas"
+        android:layout_width="255dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="@string/etHorasTrabalhadas"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="#673AB7"
+        app:layout_constraintBottom_toTopOf="@+id/etValorHora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvParaHorista" />
+
+    <TextView
+        android:id="@+id/tvSalario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="62dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcularSalario" />
+
+    <Button
+        android:id="@+id/btnCalcularSalario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btnCalcularSalario"
+        app:layout_constraintBottom_toTopOf="@+id/tvSalario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSalarioAtual" />
+
+    <EditText
+        android:id="@+id/etSalarioAtual"
+        android:layout_width="255dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="@string/etSalario"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColorHint="#673AB7"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcularSalario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAnosDeInstituicao" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
